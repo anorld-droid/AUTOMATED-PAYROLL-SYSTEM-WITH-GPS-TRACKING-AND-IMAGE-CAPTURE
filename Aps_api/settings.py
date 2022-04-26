@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-^a8%uth)=q2k^uv9$n!_ffe!c2ipcocj89j8nr_w7gsvg9zstq'
+SECRET_KEY = 'django-insecure-^a8%uth)=q2k^uv9$n!_ffe!c2ipcocj89j8nr_w7gsvg9zstq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -56,11 +56,6 @@ MIDDLEWARE = [
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 30,
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
 
 }
 
@@ -91,7 +86,7 @@ WSGI_APPLICATION = 'Aps_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'TrackApiDB',
+        'NAME': 'trackapidb',
         'USER': 'postgres',
         'PASSWORD': 'superuser',
         'HOST': '127.0.0.1',

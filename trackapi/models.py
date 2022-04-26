@@ -24,15 +24,20 @@ def employee_directory_path(instance, filename):
 
 
 class Employee(models.Model):
+    owner = models.ForeignKey(
+        'auth.User', related_name='employees', on_delete=models.CASCADE, null=False)
     id = models.CharField(blank=False, null=False,
                           max_length=100, primary_key=True, unique=True)
     first_name = models.CharField(blank=False, null=False, max_length=70)
     last_name = models.CharField(blank=False, null=False, max_length=70)
     image = models.ImageField(
-        upload_to=employee_directory_path, height_field=None, width_field=None, max_length=100, null=True)
+        upload_to=employee_directory_path, height_field=None, width_field=None, max_length=100, null=False)
     job_name = models.CharField(blank=False, null=False, max_length=50)
     hire_date = models.DateField(blank=False)
     status = models.CharField(max_length=4)
     salary = models.ForeignKey(Salary, on_delete=models.CASCADE)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ['hire_date']

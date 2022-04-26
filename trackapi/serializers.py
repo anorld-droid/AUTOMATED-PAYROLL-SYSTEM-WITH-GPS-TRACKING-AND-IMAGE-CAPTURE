@@ -4,6 +4,15 @@ from rest_framework import serializers
 from .models import Department, Employee, Salary, Location
 
 
+class UserSerializer(serializers.ModelSerializer):
+    employees = serializers.PrimaryKeyRelatedField(
+        many=True, queryset=Employee.objects.all())
+
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'employees']
+
+
 class SalarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Salary
@@ -23,13 +32,14 @@ class DepartmentSerielizer(serializers.ModelSerializer):
 
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
     department = DepartmentSerielizer()
     salary = SalarySerializer()
     location = LocationSerializer()
 
     class Meta:
         model = Employee
-        fields = ['id', 'first_name', 'last_name', 'image', 'job_name', 'hire_date',
+        fields = ['owner', 'id', 'first_name', 'last_name', 'image', 'job_name', 'hire_date',
                   'status', 'department', 'salary', 'location']
 
     def create(self, validated_data):
