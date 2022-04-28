@@ -72,4 +72,12 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
         salary.commission = salary_data.get('commission', salary.commission)
         salary.save
 
+        location_data = validated_data.pop('location')
+        location = instance.location
+        location.one_hour = location_data.get('one_hour', location.one_hour)
+        location.two_hours = location_data.get('two_hours', location.two_hours)
+        location.three_hours = location_data.get(
+            'three_hours', location.three_hours)
+        location.save
+
         return instance
