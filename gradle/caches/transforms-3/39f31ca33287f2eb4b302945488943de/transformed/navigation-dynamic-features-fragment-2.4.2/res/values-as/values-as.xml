@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"ইনষ্টল কৰাটো বাতিল কৰা হৈছে।"</string>
+    <string msgid="863287960437940689" name="installation_failed">"ইনষ্টল কৰিব পৰা নগ’ল।"</string>
+    <string msgid="5968445461040787716" name="installing_module">"ইনষ্টল কৰাৰ মডিউল:"</string>
+    <string msgid="4702104660890557116" name="ok">"ঠিক আছে"</string>
+    <string msgid="8366783942222789124" name="progress">"অগ্ৰগতি:"</string>
+    <string msgid="1065327189183624288" name="retry">"পুনৰ চেষ্টা কৰক"</string>
+</resources>

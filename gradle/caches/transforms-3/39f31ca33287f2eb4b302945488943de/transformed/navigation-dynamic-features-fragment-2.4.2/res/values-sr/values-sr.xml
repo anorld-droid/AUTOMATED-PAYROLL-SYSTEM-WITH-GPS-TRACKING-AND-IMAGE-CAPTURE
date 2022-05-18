@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"Инсталација је отказана."</string>
+    <string msgid="863287960437940689" name="installation_failed">"Инсталација није успела."</string>
+    <string msgid="5968445461040787716" name="installing_module">"Модул инсталирања:"</string>
+    <string msgid="4702104660890557116" name="ok">"Потврди"</string>
+    <string msgid="8366783942222789124" name="progress">"Напредак:"</string>
+    <string msgid="1065327189183624288" name="retry">"Пробај поново"</string>
+</resources>

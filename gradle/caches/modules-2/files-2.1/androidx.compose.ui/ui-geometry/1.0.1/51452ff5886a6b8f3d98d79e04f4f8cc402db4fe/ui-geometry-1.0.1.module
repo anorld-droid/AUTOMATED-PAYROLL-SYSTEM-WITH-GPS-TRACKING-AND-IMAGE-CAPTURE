@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.compose.ui",
+    "module": "ui-geometry",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ui-geometry-1.0.1.aar",
+          "url": "ui-geometry-1.0.1.aar",
+          "size": 37321,
+          "sha512": "aaf6c31daecf1f8c9ee4804cce6189b0c43cea81607c9c1d1fa6bb35d8d5fa35165cd915990608882fafad45b93b106a8e878ee94ca809cd80c167f5b6184865",
+          "sha256": "04dcea79de0af8347f4517bec20578d4240ae5ee40191020ca07d7a38e640033",
+          "sha1": "98d9eb3ac8ad91a0e7857f58da0e30e5052ef042",
+          "md5": "01878176548a2da69bcdd9193bf0e55b"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-util",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ui-geometry-1.0.1.aar",
+          "url": "ui-geometry-1.0.1.aar",
+          "size": 37321,
+          "sha512": "aaf6c31daecf1f8c9ee4804cce6189b0c43cea81607c9c1d1fa6bb35d8d5fa35165cd915990608882fafad45b93b106a8e878ee94ca809cd80c167f5b6184865",
+          "sha256": "04dcea79de0af8347f4517bec20578d4240ae5ee40191020ca07d7a38e640033",
+          "sha1": "98d9eb3ac8ad91a0e7857f58da0e30e5052ef042",
+          "md5": "01878176548a2da69bcdd9193bf0e55b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ui-geometry-1.0.1-sources.jar",
+          "url": "ui-geometry-1.0.1-sources.jar",
+          "size": 17854,
+          "sha512": "0eddfd791e910b05fcdc80ee048090628ad571bd83d58dd77e10d3e32a1a17e52f085e924b61c43f498578505ed03cec5d68099c45590918c85ad4b58d06f9c8",
+          "sha256": "296a33c82f908a43b450389274d203465d2d14f6cab364e9c390411924cde988",
+          "sha1": "be1f2ac9907309bae983a9ff69646a811493ebbf",
+          "md5": "c505070ebf86fbbed3cf001c9ee9b99b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.android.tools",
+    "module": "common",
+    "version": "30.0.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools",
+          "module": "annotations",
+          "version": {
+            "requires": "30.0.4"
+          }
+        },
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "30.1-jre"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "common-30.0.4.jar",
+          "url": "common-30.0.4.jar",
+          "size": 355249,
+          "sha512": "5e88988089432de80c7d8c99e1d869b5a8a8dc701e8fa963a8c778e7ab82d785e346c0abdedace70da53798459445b6716952c65e70c40e5a58be8138a1a2962",
+          "sha256": "d1aa2b6a43843c385ddd246fb0118acf45afad5317edb3c508a4604a288fa9c9",
+          "sha1": "8ad211d914acb75405897e95d3a43748747195c1",
+          "md5": "5a442dddd40f008b6b75abb1a48f978a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.4.32"
+          }
+        },
+        {
+          "group": "com.android.tools",
+          "module": "annotations",
+          "version": {
+            "requires": "30.0.4"
+          }
+        },
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "30.1-jre"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "common-30.0.4.jar",
+          "url": "common-30.0.4.jar",
+          "size": 355249,
+          "sha512": "5e88988089432de80c7d8c99e1d869b5a8a8dc701e8fa963a8c778e7ab82d785e346c0abdedace70da53798459445b6716952c65e70c40e5a58be8138a1a2962",
+          "sha256": "d1aa2b6a43843c385ddd246fb0118acf45afad5317edb3c508a4604a288fa9c9",
+          "sha1": "8ad211d914acb75405897e95d3a43748747195c1",
+          "md5": "5a442dddd40f008b6b75abb1a48f978a"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "common-30.0.4-javadoc.jar",
+          "url": "common-30.0.4-javadoc.jar",
+          "size": 892205,
+          "sha512": "99f010a20ec9998a72f0150a3e687fb043dca874d890e16e0680a55e1bd613240b148eb3e1da7e9d486bc9805544fadd5b042379453c20d6383c5cc9a8378e28",
+          "sha256": "e0cbdcc09021bf6e97bb4916fb913073beb78518e1a04317745e816628622941",
+          "sha1": "3d7aa74de9bb7bcf28a3637ad397d4a2a29bad7d",
+          "md5": "83a981cd33311160d3350ea7234331cb"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "common-30.0.4-sources.jar",
+          "url": "common-30.0.4-sources.jar",
+          "size": 213405,
+          "sha512": "01b105ec0a118910976c00bd55ee4777954390538538e8ed0c182aff878f9095862dfa07c8d0f75307c7efdbe3bd3bba5eec783de6b38749b7ba7d4018e2d0a8",
+          "sha256": "997c4ffc7ff2373d2f783ac0f0a416a38bf58c453d719931eeb250efe481e81f",
+          "sha1": "28204d105852f9944717bec53e0ed686356fb914",
+          "md5": "820aa75de952df490db71c2f36fc0337"
+        }
+      ]
+    }
+  ]
+}

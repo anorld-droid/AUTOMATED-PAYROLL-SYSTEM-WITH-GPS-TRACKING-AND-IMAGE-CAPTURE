@@ -1,0 +1,110 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.navigation",
+    "module": "navigation-dynamic-features-runtime",
+    "version": "2.4.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-runtime",
+          "version": {
+            "requires": "2.4.2"
+          }
+        },
+        {
+          "group": "com.google.android.play",
+          "module": "core",
+          "version": {
+            "requires": "1.10.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "navigation-dynamic-features-runtime-2.4.2.aar",
+          "url": "navigation-dynamic-features-runtime-2.4.2.aar",
+          "size": 47749,
+          "sha512": "e4e7bc01a81b46d39f9de1cf5477fd6bdbb494d5a7c325936e9e79a8fc7af11a0b9c83569013b0a2f298b692bbb245a713756f2532f4b2fdfd8f5c895d013ae1",
+          "sha256": "4fc6d57204daab10c24a48dd77773668e19ceb604f93a11e06ab9982d3619aca",
+          "sha1": "8d7836aba96811d61383bc5de5ad30757172527a",
+          "md5": "56dac217c9058b27657fc8ffd4d07ab5"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-runtime",
+          "version": {
+            "requires": "2.4.2"
+          }
+        },
+        {
+          "group": "com.google.android.play",
+          "module": "core",
+          "version": {
+            "requires": "1.10.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "navigation-dynamic-features-runtime-2.4.2.aar",
+          "url": "navigation-dynamic-features-runtime-2.4.2.aar",
+          "size": 47749,
+          "sha512": "e4e7bc01a81b46d39f9de1cf5477fd6bdbb494d5a7c325936e9e79a8fc7af11a0b9c83569013b0a2f298b692bbb245a713756f2532f4b2fdfd8f5c895d013ae1",
+          "sha256": "4fc6d57204daab10c24a48dd77773668e19ceb604f93a11e06ab9982d3619aca",
+          "sha1": "8d7836aba96811d61383bc5de5ad30757172527a",
+          "md5": "56dac217c9058b27657fc8ffd4d07ab5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "navigation-dynamic-features-runtime-2.4.2-sources.jar",
+          "url": "navigation-dynamic-features-runtime-2.4.2-sources.jar",
+          "size": 20154,
+          "sha512": "3babc18b978c03a2aa6f333f2d05faeae70cbb05a9a481530173b436d35e80aff91fe336948312452ecbacc4087b650aa5ecb14b08732ce264a269f105cd648f",
+          "sha256": "65ab3be3df75bd13c759f1b1f5a38de0d3d0dc31db5ca2a7a2a1c56878d0c62f",
+          "sha1": "1ddb6c8df2ba5a24b64ea071a2bb2810f0bad292",
+          "md5": "3bd94509779a32f975607037be0ce5b9"
+        }
+      ]
+    }
+  ]
+}

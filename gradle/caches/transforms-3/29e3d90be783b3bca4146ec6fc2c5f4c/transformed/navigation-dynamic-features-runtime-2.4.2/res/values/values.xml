@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="string|reference" name="moduleName"/>
+    <declare-styleable name="DynamicActivityNavigator">
+        <attr name="moduleName"/>
+    </declare-styleable>
+    <declare-styleable name="DynamicGraphNavigator">
+        <attr name="moduleName"/>
+        <attr format="reference" name="progressDestination"/>
+    </declare-styleable>
+    <declare-styleable name="DynamicIncludeGraphNavigator">
+        <attr name="moduleName"/>
+        <attr format="string|reference" name="graphResName"/>
+        <attr format="string|reference" name="graphPackage"/>
+    </declare-styleable>
+</resources>

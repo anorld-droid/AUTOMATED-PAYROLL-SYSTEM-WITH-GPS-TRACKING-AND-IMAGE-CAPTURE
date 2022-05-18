@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"ఇన్‌స్టాలేషన్ రద్దయింది."</string>
+    <string msgid="863287960437940689" name="installation_failed">"ఇన్‌స్టాల్ చేయడం విఫలమైంది"</string>
+    <string msgid="5968445461040787716" name="installing_module">"మాడ్యూల్‌ను ఇన్‌స్టాల్ చేస్తోంది:"</string>
+    <string msgid="4702104660890557116" name="ok">"సరే"</string>
+    <string msgid="8366783942222789124" name="progress">"ప్రోగ్రెస్:"</string>
+    <string msgid="1065327189183624288" name="retry">"మళ్లీ ప్రయత్నించు"</string>
+</resources>

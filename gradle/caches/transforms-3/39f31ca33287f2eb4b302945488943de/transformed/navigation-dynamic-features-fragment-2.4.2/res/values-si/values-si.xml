@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"ස්ථාපනය අවලංගු කරන ලදි."</string>
+    <string msgid="863287960437940689" name="installation_failed">"ස්ථාපනය අසාර්ථක විය."</string>
+    <string msgid="5968445461040787716" name="installing_module">"මොඩියුලය ස්ථාපනය කරමින්:"</string>
+    <string msgid="4702104660890557116" name="ok">"හරි"</string>
+    <string msgid="8366783942222789124" name="progress">"ප්‍රගතිය:"</string>
+    <string msgid="1065327189183624288" name="retry">"යළි උත්සාහ කරන්න"</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"நிறுவுதல் ரத்துசெய்யப்பட்டது."</string>
+    <string msgid="863287960437940689" name="installation_failed">"நிறுவ முடியவில்லை."</string>
+    <string msgid="5968445461040787716" name="installing_module">"மாடியூல்டை நிறுவுகிறது:"</string>
+    <string msgid="4702104660890557116" name="ok">"சரி"</string>
+    <string msgid="8366783942222789124" name="progress">"செயல்நிலை:"</string>
+    <string msgid="1065327189183624288" name="retry">"மீண்டும் முயல்க"</string>
+</resources>

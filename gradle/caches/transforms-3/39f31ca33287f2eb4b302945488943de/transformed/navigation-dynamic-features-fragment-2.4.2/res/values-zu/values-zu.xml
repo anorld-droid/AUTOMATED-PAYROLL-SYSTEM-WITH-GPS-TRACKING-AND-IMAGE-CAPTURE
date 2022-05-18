@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"Ukufakwa kukhanseliwe."</string>
+    <string msgid="863287960437940689" name="installation_failed">"Ukufakwa kwehlulekile."</string>
+    <string msgid="5968445461040787716" name="installing_module">"Umojuli yokufaka:"</string>
+    <string msgid="4702104660890557116" name="ok">"Kulungile"</string>
+    <string msgid="8366783942222789124" name="progress">"Ukuqhubeka:"</string>
+    <string msgid="1065327189183624288" name="retry">"Zama futhi"</string>
+</resources>

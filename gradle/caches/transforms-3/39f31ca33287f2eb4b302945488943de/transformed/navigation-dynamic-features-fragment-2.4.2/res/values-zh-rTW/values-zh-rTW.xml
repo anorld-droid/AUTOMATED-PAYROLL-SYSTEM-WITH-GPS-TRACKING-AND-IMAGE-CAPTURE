@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"已取消安裝。"</string>
+    <string msgid="863287960437940689" name="installation_failed">"無法安裝。"</string>
+    <string msgid="5968445461040787716" name="installing_module">"正在安裝模組："</string>
+    <string msgid="4702104660890557116" name="ok">"確定"</string>
+    <string msgid="8366783942222789124" name="progress">"進度："</string>
+    <string msgid="1065327189183624288" name="retry">"重試"</string>
+</resources>

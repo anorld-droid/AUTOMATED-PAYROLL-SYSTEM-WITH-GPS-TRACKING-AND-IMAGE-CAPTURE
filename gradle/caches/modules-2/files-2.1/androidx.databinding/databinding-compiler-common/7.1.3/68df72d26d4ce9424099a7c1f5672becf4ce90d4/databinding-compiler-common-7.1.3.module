@@ -1,0 +1,190 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.databinding",
+    "module": "databinding-compiler-common",
+    "version": "7.1.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "databinding-compiler-common-7.1.3.jar",
+          "url": "databinding-compiler-common-7.1.3.jar",
+          "size": 501771,
+          "sha512": "65053afd48d3f84736f64e9cd17bb31b95e46286c93d561d95c89ab5a64eab5376da7b220fb30ff1ccdc2be6acf9ca67df85ac17723726cc4816dc2b152ece50",
+          "sha256": "c2bdadc61b3b05641351a968db871c77a0561cf966109ff244e832027aa3645b",
+          "sha1": "84e174f78c642d78404306009e2c00750278e736",
+          "md5": "ef7f85498e4b82243fdbd64bc1481c9d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.databinding",
+          "module": "databinding-common",
+          "version": {
+            "requires": "7.1.3"
+          }
+        },
+        {
+          "group": "com.android.databinding",
+          "module": "baseLibrary",
+          "version": {
+            "requires": "7.1.3"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr4",
+          "version": {
+            "requires": "4.5.3"
+          }
+        },
+        {
+          "group": "commons-io",
+          "module": "commons-io",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "com.googlecode.juniversalchardet",
+          "module": "juniversalchardet",
+          "version": {
+            "requires": "1.0.3"
+          }
+        },
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "30.1-jre"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "javapoet",
+          "version": {
+            "requires": "1.10.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.4.32"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "org.glassfish.jaxb",
+          "module": "jaxb-runtime",
+          "version": {
+            "requires": "2.3.2"
+          }
+        },
+        {
+          "group": "com.android.tools",
+          "module": "annotations",
+          "version": {
+            "requires": "30.1.3"
+          }
+        },
+        {
+          "group": "com.android.tools.build.jetifier",
+          "module": "jetifier-core",
+          "version": {
+            "requires": "1.0.0-beta09"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "databinding-compiler-common-7.1.3.jar",
+          "url": "databinding-compiler-common-7.1.3.jar",
+          "size": 501771,
+          "sha512": "65053afd48d3f84736f64e9cd17bb31b95e46286c93d561d95c89ab5a64eab5376da7b220fb30ff1ccdc2be6acf9ca67df85ac17723726cc4816dc2b152ece50",
+          "sha256": "c2bdadc61b3b05641351a968db871c77a0561cf966109ff244e832027aa3645b",
+          "sha1": "84e174f78c642d78404306009e2c00750278e736",
+          "md5": "ef7f85498e4b82243fdbd64bc1481c9d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "databinding-compiler-common-7.1.3-javadoc.jar",
+          "url": "databinding-compiler-common-7.1.3-javadoc.jar",
+          "size": 837289,
+          "sha512": "ce0f703ede44f6e4a5ace4245818dc8196f1c0fb8946218c5f0e999966796fc74b831c684bc68f44e083fc8750a07f620932237529acb6c38d41f89ca341ea63",
+          "sha256": "2c373f3af5e6a7303d90d25bc919448d81040eb9d447f7445559e7fceef902d7",
+          "sha1": "2bcbba8bd37c692bb12cd6453967191cd525eae2",
+          "md5": "4fbfaa617fcbae07497a8decf4cc9ebe"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "databinding-compiler-common-7.1.3-sources.jar",
+          "url": "databinding-compiler-common-7.1.3-sources.jar",
+          "size": 200306,
+          "sha512": "cf26e09807ff29276ba1358589d25d08f58695a3dc9f99630c7c0f5c95b5c9aef74d10c0b2745012b7e2a4e623d1f9e7c2e0bb71c1dbea76c17f351556398216",
+          "sha256": "9887cea3bd0d59ac2d1e3f13ab7caab9824f4405fb1259c1286034944df1f373",
+          "sha1": "9795c688342601e978cdee0e902532d7626710cb",
+          "md5": "4d570ecbc7d924f00a4076fa7f6fdb3a"
+        }
+      ]
+    }
+  ]
+}

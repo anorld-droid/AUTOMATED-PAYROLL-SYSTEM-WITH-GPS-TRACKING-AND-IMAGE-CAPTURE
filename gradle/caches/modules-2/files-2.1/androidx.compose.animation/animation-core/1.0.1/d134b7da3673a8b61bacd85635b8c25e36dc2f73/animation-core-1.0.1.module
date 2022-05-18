@@ -1,0 +1,145 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.compose.animation",
+    "module": "animation-core",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.5.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "animation-core-1.0.1.aar",
+          "url": "animation-core-1.0.1.aar",
+          "size": 1287847,
+          "sha512": "6d88d5bedd425602f92d6ae9b77a816d49a6944fa830cf6122d8db863cc877b35b0718a9efceeb412e982c25effc0be0afb019ea736c8cbc367d54db20bdefcc",
+          "sha256": "ac574b1ec7c6ccf4fa6671fe6947aec10d4ada4604498725b225c92dbcdb6811",
+          "sha1": "85c72cc9790834fc9e6ef927ffe6d70750886186",
+          "md5": "2d8e9a7ec27060acd7f36c28fbc942c7"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-unit",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-util",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "animation-core-1.0.1.aar",
+          "url": "animation-core-1.0.1.aar",
+          "size": 1287847,
+          "sha512": "6d88d5bedd425602f92d6ae9b77a816d49a6944fa830cf6122d8db863cc877b35b0718a9efceeb412e982c25effc0be0afb019ea736c8cbc367d54db20bdefcc",
+          "sha256": "ac574b1ec7c6ccf4fa6671fe6947aec10d4ada4604498725b225c92dbcdb6811",
+          "sha1": "85c72cc9790834fc9e6ef927ffe6d70750886186",
+          "md5": "2d8e9a7ec27060acd7f36c28fbc942c7"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "animation-core-1.0.1-sources.jar",
+          "url": "animation-core-1.0.1-sources.jar",
+          "size": 69581,
+          "sha512": "63939bdc4a1818d34b299bbdc3cad39362e3072529e828e64740714fcb178815b0b6ba0d75b91e542e276598dce24f0667efd29680c8ed47d7babb1a3d1ae387",
+          "sha256": "bf0748117142aa4525ccf8c74b83a6be0d98ca7c7c68e9919043f44a8a8757b4",
+          "sha1": "c230b84f27ee79adf5e8d6115cdf6c3f89f5b7fd",
+          "md5": "589f869157655564c0a63445369bf2fe"
+        }
+      ]
+    }
+  ]
+}

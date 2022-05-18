@@ -1,0 +1,15 @@
+int attr moduleName 0x0
+int id dfn_progress_fragment 0x0
+int id installation_progress 0x0
+int id progress_action 0x0
+int id progress_icon 0x0
+int id progress_title 0x0
+int layout dynamic_feature_install_fragment 0x0
+int string installation_cancelled 0x0
+int string installation_failed 0x0
+int string installing_module 0x0
+int string ok 0x0
+int string progress 0x0
+int string retry 0x0
+int[] styleable DynamicFragmentNavigator { 0x0 }
+int styleable DynamicFragmentNavigator_moduleName 0

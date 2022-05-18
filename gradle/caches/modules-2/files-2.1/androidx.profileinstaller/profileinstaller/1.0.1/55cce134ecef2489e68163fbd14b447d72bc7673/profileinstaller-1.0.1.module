@@ -1,0 +1,103 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.profileinstaller",
+    "module": "profileinstaller",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.startup",
+          "module": "startup-runtime",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "profileinstaller-1.0.1.aar",
+          "url": "profileinstaller-1.0.1.aar",
+          "size": 27575,
+          "sha512": "47583f297f3e4f3a5e1d3842f18b63a5e9c3049ca9f8e663fec8e88d1ab492d400fbd195c58b606a17247339e0e4ca7841c00ffc71af9b6966fd85a5f0defc8f",
+          "sha256": "dd433719d9b63af001d2c89676057e23fbf26f6f8505b19b6f74e300e7684265",
+          "sha1": "a2d92dbe436f6e5310e089ed4b6ca4eddcd0af8a",
+          "md5": "8714376a55bfdfe62cb20c2608a525b4"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "androidx.startup",
+          "module": "startup-runtime",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "profileinstaller-1.0.1.aar",
+          "url": "profileinstaller-1.0.1.aar",
+          "size": 27575,
+          "sha512": "47583f297f3e4f3a5e1d3842f18b63a5e9c3049ca9f8e663fec8e88d1ab492d400fbd195c58b606a17247339e0e4ca7841c00ffc71af9b6966fd85a5f0defc8f",
+          "sha256": "dd433719d9b63af001d2c89676057e23fbf26f6f8505b19b6f74e300e7684265",
+          "sha1": "a2d92dbe436f6e5310e089ed4b6ca4eddcd0af8a",
+          "md5": "8714376a55bfdfe62cb20c2608a525b4"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "profileinstaller-1.0.1-sources.jar",
+          "url": "profileinstaller-1.0.1-sources.jar",
+          "size": 20658,
+          "sha512": "4886ff991307402df11028ca0072695140b708b4643a7b00298c4b48e4d7df840f4670cf3a3a3c0d164e26b107630ae342f2ffcd8f61cb002ad1985663a60386",
+          "sha256": "798207652a53ee69b34f75f03716441d3221edb121d7dd1032bd7ae1be74293b",
+          "sha1": "8da06d1829dd71326bb0eb488d0e2b647d37809f",
+          "md5": "eb9a21dffa7a5eebb4a6ce12df21f29f"
+        }
+      ]
+    }
+  ]
+}

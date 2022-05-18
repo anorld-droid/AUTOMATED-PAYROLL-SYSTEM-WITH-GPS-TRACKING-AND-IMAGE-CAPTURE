@@ -1,0 +1,131 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-viewmodel-compose",
+    "version": "2.4.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-ktx",
+          "version": {
+            "requires": "2.3.0"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui",
+          "version": {
+            "requires": "1.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-compose-2.4.0.aar",
+          "url": "lifecycle-viewmodel-compose-2.4.0.aar",
+          "size": 6684,
+          "sha512": "5055d0a8e6c30b557b172569df129e3ee490aa8f81829766257850c270cc6c322ea7cdefc046aadc485f64961b8ecb25f95e43b5612913b856688fd3cfe7ded9",
+          "sha256": "e59b6807a6078b56d2202c4c5609191a139f589ca039a8e7c2923547ca358ae9",
+          "sha1": "67bab71c9146033c32f69cf8b26d12da60609fc0",
+          "md5": "5e1c972295b482a288a3b89f5810d30a"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-ktx",
+          "version": {
+            "requires": "2.3.0"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.30"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-compose-2.4.0.aar",
+          "url": "lifecycle-viewmodel-compose-2.4.0.aar",
+          "size": 6684,
+          "sha512": "5055d0a8e6c30b557b172569df129e3ee490aa8f81829766257850c270cc6c322ea7cdefc046aadc485f64961b8ecb25f95e43b5612913b856688fd3cfe7ded9",
+          "sha256": "e59b6807a6078b56d2202c4c5609191a139f589ca039a8e7c2923547ca358ae9",
+          "sha1": "67bab71c9146033c32f69cf8b26d12da60609fc0",
+          "md5": "5e1c972295b482a288a3b89f5810d30a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-compose-2.4.0-sources.jar",
+          "url": "lifecycle-viewmodel-compose-2.4.0-sources.jar",
+          "size": 3092,
+          "sha512": "f8b3c8d7c01ef63b5c496edc99325227d3925b6a35bef2d68c84b831100eba76eeeb1664f08e6e7c748923a3921503d690d2bab215e203f9d9f65422fead14fc",
+          "sha256": "6608531b0526640b945335b3502a40cfd316fae0cc8d40f24bac787bdc943fcd",
+          "sha1": "c9b120561f7ae26405f8a8731d5f1c23190b587d",
+          "md5": "6aecbfdf78b3f09f2b4a25d5527f6fe8"
+        }
+      ]
+    }
+  ]
+}

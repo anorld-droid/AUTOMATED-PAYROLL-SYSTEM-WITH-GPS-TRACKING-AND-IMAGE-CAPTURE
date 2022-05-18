@@ -1,0 +1,173 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.compose.ui",
+    "module": "ui-text",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-graphics",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-unit",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ui-text-1.0.1.aar",
+          "url": "ui-text-1.0.1.aar",
+          "size": 457706,
+          "sha512": "a03a49f9235b23c8e322518479677755d0d2ed39d76586ecaf99f9d1d85f8f7e93593a12b35a8268c44d288c1948abdb6cd4903ba04f3421c2a10fc6c2edc66c",
+          "sha256": "f276b403fb95bda29fc83a33ff717591662ea2c769fc34c2077ec460b65f0da0",
+          "sha1": "55a255e5bc2714c22e1f078832fb0ee06ad8bd18",
+          "md5": "9b797fd151a274c8123e34b6cd8eda66"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-graphics",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-unit",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.5.21"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-saveable",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui-util",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.21"
+          }
+        },
+        {
+          "group": "androidx.collection",
+          "module": "collection",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core",
+          "version": {
+            "requires": "1.5.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ui-text-1.0.1.aar",
+          "url": "ui-text-1.0.1.aar",
+          "size": 457706,
+          "sha512": "a03a49f9235b23c8e322518479677755d0d2ed39d76586ecaf99f9d1d85f8f7e93593a12b35a8268c44d288c1948abdb6cd4903ba04f3421c2a10fc6c2edc66c",
+          "sha256": "f276b403fb95bda29fc83a33ff717591662ea2c769fc34c2077ec460b65f0da0",
+          "sha1": "55a255e5bc2714c22e1f078832fb0ee06ad8bd18",
+          "md5": "9b797fd151a274c8123e34b6cd8eda66"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ui-text-1.0.1-sources.jar",
+          "url": "ui-text-1.0.1-sources.jar",
+          "size": 172782,
+          "sha512": "439c3de871dbf85920b37423112802f5cfaeab3fc48c900b66b02938549d02485a47f983acb27bb2a2500250b1e8c4fc19ac6c0d306c11f202544a5d960e0c7b",
+          "sha256": "2a79c0efde7fa47a05030197ee438a792528d652bcebb863f90dd0a001b42e48",
+          "sha1": "4536a690eae671aebd209959855372e537aee7d5",
+          "md5": "e0b233deda01d1f7f83f5155a2769d4b"
+        }
+      ]
+    }
+  ]
+}

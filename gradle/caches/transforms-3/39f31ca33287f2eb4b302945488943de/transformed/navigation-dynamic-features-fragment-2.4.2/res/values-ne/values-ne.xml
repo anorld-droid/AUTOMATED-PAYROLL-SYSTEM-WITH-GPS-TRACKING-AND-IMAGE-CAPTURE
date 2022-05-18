@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"स्थापना रद्द गरियो।"</string>
+    <string msgid="863287960437940689" name="installation_failed">"स्थापना गर्न सकिएन।"</string>
+    <string msgid="5968445461040787716" name="installing_module">"मोड्युल स्थापना गर्दै:"</string>
+    <string msgid="4702104660890557116" name="ok">"ठिक छ"</string>
+    <string msgid="8366783942222789124" name="progress">"प्रगति:"</string>
+    <string msgid="1065327189183624288" name="retry">"पुनः प्रयास गर्नुहोस्"</string>
+</resources>

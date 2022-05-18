@@ -1,0 +1,15 @@
+androidx.navigation.dynamicfeatures.fragment
+attr moduleName
+id dfn_progress_fragment
+id installation_progress
+id progress_action
+id progress_icon
+id progress_title
+layout dynamic_feature_install_fragment
+string installation_cancelled
+string installation_failed
+string installing_module
+string ok
+string progress
+string retry
+styleable DynamicFragmentNavigator moduleName

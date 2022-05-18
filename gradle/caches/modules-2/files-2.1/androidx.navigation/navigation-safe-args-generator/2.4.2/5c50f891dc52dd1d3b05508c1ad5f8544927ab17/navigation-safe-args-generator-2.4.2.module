@@ -1,0 +1,121 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.navigation",
+    "module": "navigation-safe-args-generator",
+    "version": "2.4.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "navigation-safe-args-generator-2.4.2.jar",
+          "url": "navigation-safe-args-generator-2.4.2.jar",
+          "size": 168773,
+          "sha512": "37ec00531d2892388c23ac6ed3a50b6fabdfead25b75572be7740876cad8e18b2dde10797c9b9f24e87e90d36f6e16020aa1849215ce8a36635f27f47d076001",
+          "sha256": "d99ce95de272fd9472c913c39a4404dd90f67c61d01adda21c14e76d868555e3",
+          "sha1": "457990217227e91de1c8f166118c121bdccb615a",
+          "md5": "35dab56d9fdda83c49f5c60a7ec2add6"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "xpp3",
+          "module": "xpp3",
+          "version": {
+            "requires": "1.1.4c"
+          }
+        },
+        {
+          "group": "xmlpull",
+          "module": "xmlpull",
+          "version": {
+            "requires": "1.1.3.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.6.0"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "javapoet",
+          "version": {
+            "requires": "1.13.0"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "navigation-safe-args-generator-2.4.2.jar",
+          "url": "navigation-safe-args-generator-2.4.2.jar",
+          "size": 168773,
+          "sha512": "37ec00531d2892388c23ac6ed3a50b6fabdfead25b75572be7740876cad8e18b2dde10797c9b9f24e87e90d36f6e16020aa1849215ce8a36635f27f47d076001",
+          "sha256": "d99ce95de272fd9472c913c39a4404dd90f67c61d01adda21c14e76d868555e3",
+          "sha1": "457990217227e91de1c8f166118c121bdccb615a",
+          "md5": "35dab56d9fdda83c49f5c60a7ec2add6"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "navigation-safe-args-generator-2.4.2-sources.jar",
+          "url": "navigation-safe-args-generator-2.4.2-sources.jar",
+          "size": 36438,
+          "sha512": "ee113bd67812768718eaff97a4f27da377a1f69af8136dcc9b5cec3281f5a9354393396833825ab71fec9789267a69a73c13bc1c2e204fe66620edf0dc84065b",
+          "sha256": "2b63669b67fd5d44c73a0a04027ecf20f90f9d5543b28671f7d3394ae2858c3b",
+          "sha1": "8079ab96acb21efabc0443ddaae5bbaaf5425c67",
+          "md5": "617be2c91afbcbc6cc00caadf875093b"
+        }
+      ]
+    }
+  ]
+}

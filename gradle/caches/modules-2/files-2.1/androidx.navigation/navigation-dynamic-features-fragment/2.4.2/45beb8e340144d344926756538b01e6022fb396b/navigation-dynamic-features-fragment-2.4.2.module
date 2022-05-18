@@ -1,0 +1,124 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.navigation",
+    "module": "navigation-dynamic-features-fragment",
+    "version": "2.4.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-dynamic-features-runtime",
+          "version": {
+            "requires": "2.4.2"
+          }
+        },
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-fragment",
+          "version": {
+            "requires": "2.4.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "navigation-dynamic-features-fragment-2.4.2.aar",
+          "url": "navigation-dynamic-features-fragment-2.4.2.aar",
+          "size": 97261,
+          "sha512": "47029856e751729575f4c4583597f31362e52173aa21543bee57d52f8aba06bae2dde7e8ce41af12c6daefe177c2a3be5798a46424d0d4e568eec32626788e47",
+          "sha256": "0f4f914cff4c50c9d36dec9e0efca467311b566209a4efd33c32409f53235737",
+          "sha1": "5e224a65e2b6f15287ab9a83b80a9552771bbb0c",
+          "md5": "cd2b8661fc6f3faa2bfd5760474539d8"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-dynamic-features-runtime",
+          "version": {
+            "requires": "2.4.2"
+          }
+        },
+        {
+          "group": "androidx.navigation",
+          "module": "navigation-fragment",
+          "version": {
+            "requires": "2.4.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "navigation-dynamic-features-fragment-2.4.2.aar",
+          "url": "navigation-dynamic-features-fragment-2.4.2.aar",
+          "size": 97261,
+          "sha512": "47029856e751729575f4c4583597f31362e52173aa21543bee57d52f8aba06bae2dde7e8ce41af12c6daefe177c2a3be5798a46424d0d4e568eec32626788e47",
+          "sha256": "0f4f914cff4c50c9d36dec9e0efca467311b566209a4efd33c32409f53235737",
+          "sha1": "5e224a65e2b6f15287ab9a83b80a9552771bbb0c",
+          "md5": "cd2b8661fc6f3faa2bfd5760474539d8"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "navigation-dynamic-features-fragment-2.4.2-sources.jar",
+          "url": "navigation-dynamic-features-fragment-2.4.2-sources.jar",
+          "size": 10732,
+          "sha512": "cb29561f6188b804f82f5d15fb78154f35836aa8ae9aa7888774047a9c95a6b2a7b49a4f77d42b26f745e18c7872ffd352197b4df2b4231f6fe8366802985eb2",
+          "sha256": "6e1e5d8fec2655801ccfef8c7c96c49d965e9d45760fbbe78b290d4e1c45d38c",
+          "sha1": "8551cd26df3853d842dff6d30255753b16dd9095",
+          "md5": "b50bf80f869fb86291b7254ec9f026f2"
+        }
+      ]
+    }
+  ]
+}

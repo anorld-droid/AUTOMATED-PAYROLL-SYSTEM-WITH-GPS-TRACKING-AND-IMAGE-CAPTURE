@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="string|reference" name="moduleName"/>
+    <item name="dfn_progress_fragment" type="id"/>
+    <string name="installation_cancelled">Installation cancelled.</string>
+    <string name="installation_failed">Installation failed.</string>
+    <string name="installing_module">Installing module:</string>
+    <string name="ok">Okay</string>
+    <string name="progress">Progress:</string>
+    <string name="retry">Retry</string>
+    <declare-styleable name="DynamicFragmentNavigator">
+        <attr name="moduleName"/>
+    </declare-styleable>
+</resources>

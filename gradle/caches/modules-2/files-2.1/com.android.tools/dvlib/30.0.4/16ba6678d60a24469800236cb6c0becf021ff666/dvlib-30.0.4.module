@@ -1,0 +1,109 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.android.tools",
+    "module": "dvlib",
+    "version": "30.0.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "dvlib-30.0.4.jar",
+          "url": "dvlib-30.0.4.jar",
+          "size": 47078,
+          "sha512": "0e6c576dd114579243bcc7349ef829191f260bab001a8d04c3a9752325a82f062d98c0465e633e557e96b9608a46534b6e4a1d1d438afb25e0fc6b4422aadde4",
+          "sha256": "61edccccecc1ffca47f442326bd7c1d73f7256ef9adaac834c1d639a142e49b9",
+          "sha1": "0edb2f58bd08f8ce19cfbf79a87d1e12bbfbdd45",
+          "md5": "b438255f0cde7a3950e349013ba49f39"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools",
+          "module": "common",
+          "version": {
+            "requires": "30.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "dvlib-30.0.4.jar",
+          "url": "dvlib-30.0.4.jar",
+          "size": 47078,
+          "sha512": "0e6c576dd114579243bcc7349ef829191f260bab001a8d04c3a9752325a82f062d98c0465e633e557e96b9608a46534b6e4a1d1d438afb25e0fc6b4422aadde4",
+          "sha256": "61edccccecc1ffca47f442326bd7c1d73f7256ef9adaac834c1d639a142e49b9",
+          "sha1": "0edb2f58bd08f8ce19cfbf79a87d1e12bbfbdd45",
+          "md5": "b438255f0cde7a3950e349013ba49f39"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "dvlib-30.0.4-javadoc.jar",
+          "url": "dvlib-30.0.4-javadoc.jar",
+          "size": 403919,
+          "sha512": "6e1874df21492fdf812f8d87dc71743a2fba433940ec2896b531262dde8bd6065133e234038480303d9f8ecdd25a2c46d6b99695654456336999f0fd598bb391",
+          "sha256": "057cc06213f2649030ed66dd5f1c90792c1952c394fb21c1c424cba824184b2e",
+          "sha1": "18779a5e11552b40f209414ab1d228e057158622",
+          "md5": "c5e09273c5d2589269ca479d19c2ec76"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "dvlib-30.0.4-sources.jar",
+          "url": "dvlib-30.0.4-sources.jar",
+          "size": 44377,
+          "sha512": "9b42b63c2c9433e8365875a6b636c0b10bdc37cb0db0c640cb43e16dd63b0896d8730b52ef392f59c71f10d6f5fd20dea3108b8f7036b3408a94489b211d6cb0",
+          "sha256": "a26f197d1f50e680d2580c9cf7ddaf74808423c93ae09f80de3fe62482855d62",
+          "sha1": "0c82ca0a1e0ac35d3934f954b739c17741d44c8d",
+          "md5": "efefdbffd94adf3eb52e6d6f7865e665"
+        }
+      ]
+    }
+  ]
+}

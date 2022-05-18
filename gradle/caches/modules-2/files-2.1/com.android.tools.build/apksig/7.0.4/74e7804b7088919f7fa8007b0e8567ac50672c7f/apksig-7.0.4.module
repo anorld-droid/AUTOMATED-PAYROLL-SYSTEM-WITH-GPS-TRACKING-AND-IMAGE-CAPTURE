@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.android.tools.build",
+    "module": "apksig",
+    "version": "7.0.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "apksig-7.0.4.jar",
+          "url": "apksig-7.0.4.jar",
+          "size": 392703,
+          "sha512": "aa77e721dc525758371276a8f4f982cc520aa147428f4b3b137ccb096e7bfe0e29922e9a84847cecc8acb548bbe3e7b65e95b98f0a3fac7dc8dd3be95a1bb464",
+          "sha256": "b3d4dc274f17d84bef3636bd4b47c1a75a95d954408ac7f8d93e5eb4a7edcb99",
+          "sha1": "55069f1c25da805fdeb367612f8e94788de80966",
+          "md5": "aa9d24161b884a6615f97bea68cb6a1d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "apksig-7.0.4.jar",
+          "url": "apksig-7.0.4.jar",
+          "size": 392703,
+          "sha512": "aa77e721dc525758371276a8f4f982cc520aa147428f4b3b137ccb096e7bfe0e29922e9a84847cecc8acb548bbe3e7b65e95b98f0a3fac7dc8dd3be95a1bb464",
+          "sha256": "b3d4dc274f17d84bef3636bd4b47c1a75a95d954408ac7f8d93e5eb4a7edcb99",
+          "sha1": "55069f1c25da805fdeb367612f8e94788de80966",
+          "md5": "aa9d24161b884a6615f97bea68cb6a1d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "apksig-7.0.4-javadoc.jar",
+          "url": "apksig-7.0.4-javadoc.jar",
+          "size": 603130,
+          "sha512": "330299b08f34c73ddea9a5bbdbdd6d01c01f551b29a149282718c6cf5896e621d715130486c0a1b1984caa8d1129308e4cc9cdea0c30f19e864174a09c1b4c3a",
+          "sha256": "9c1669ec24bde08fb7f7fe205167a8c242b6fd40d13eef90c448eaeeef4b9ae2",
+          "sha1": "b9eec53f7a27be466e9ca4870ed891dc5644e9f4",
+          "md5": "25eafd835131bb4a3f72dc7b3dfa3460"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "apksig-7.0.4-sources.jar",
+          "url": "apksig-7.0.4-sources.jar",
+          "size": 260326,
+          "sha512": "9289578ae28edd33ed7cb00d4c606224acba7cb6b205e0929ae02d59e19a7944ef89dfa3f023c964ad175892297f73785c74d9e275383e81d821e508cba71130",
+          "sha256": "3ef901aa7119a4b7307dfd56779b068af3e64e471dbff87459125ef7d0ad8f44",
+          "sha1": "6719c7301de1a2225d83f2a8753c43835329521c",
+          "md5": "3dff556284b88b70df09809e25329068"
+        }
+      ]
+    }
+  ]
+}

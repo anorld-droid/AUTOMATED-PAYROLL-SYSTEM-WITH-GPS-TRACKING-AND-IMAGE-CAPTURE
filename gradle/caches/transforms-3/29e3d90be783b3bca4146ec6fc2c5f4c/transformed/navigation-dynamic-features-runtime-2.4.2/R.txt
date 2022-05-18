@@ -1,0 +1,14 @@
+int attr graphPackage 0x0
+int attr graphResName 0x0
+int attr moduleName 0x0
+int attr progressDestination 0x0
+int raw keep 0x0
+int[] styleable DynamicActivityNavigator { 0x0 }
+int styleable DynamicActivityNavigator_moduleName 0
+int[] styleable DynamicGraphNavigator { 0x0, 0x0 }
+int styleable DynamicGraphNavigator_moduleName 0
+int styleable DynamicGraphNavigator_progressDestination 1
+int[] styleable DynamicIncludeGraphNavigator { 0x0, 0x0, 0x0 }
+int styleable DynamicIncludeGraphNavigator_graphPackage 0
+int styleable DynamicIncludeGraphNavigator_graphResName 1
+int styleable DynamicIncludeGraphNavigator_moduleName 2

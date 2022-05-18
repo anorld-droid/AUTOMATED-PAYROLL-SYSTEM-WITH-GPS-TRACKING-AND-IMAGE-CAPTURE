@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"បានបោះបង់​ការដំឡើង។"</string>
+    <string msgid="863287960437940689" name="installation_failed">"ការដំឡើង​មិនបាន​សម្រេចទេ។"</string>
+    <string msgid="5968445461040787716" name="installing_module">"កំពុងដំឡើង​ម៉ូឌុល៖"</string>
+    <string msgid="4702104660890557116" name="ok">"យល់ព្រម"</string>
+    <string msgid="8366783942222789124" name="progress">"ការវិវឌ្ឍ៖"</string>
+    <string msgid="1065327189183624288" name="retry">"ព្យាយាម​ម្ដង​ទៀត"</string>
+</resources>

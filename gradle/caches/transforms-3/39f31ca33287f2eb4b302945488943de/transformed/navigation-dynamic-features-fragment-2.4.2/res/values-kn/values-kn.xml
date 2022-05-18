@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="475402237100444685" name="installation_cancelled">"ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದನ್ನು ರದ್ದು ಮಾಡಲಾಗಿದೆ."</string>
+    <string msgid="863287960437940689" name="installation_failed">"ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದು ವಿಫಲವಾಗಿದೆ."</string>
+    <string msgid="5968445461040787716" name="installing_module">"ಮಾಡ್ಯುಲ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವುದು:"</string>
+    <string msgid="4702104660890557116" name="ok">"ಸರಿ"</string>
+    <string msgid="8366783942222789124" name="progress">"ಪ್ರಗತಿ:"</string>
+    <string msgid="1065327189183624288" name="retry">"ಮರುಪ್ರಯತ್ನಿಸಿ"</string>
+</resources>

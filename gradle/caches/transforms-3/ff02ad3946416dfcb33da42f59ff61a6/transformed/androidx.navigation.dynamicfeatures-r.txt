@@ -1,0 +1,9 @@
+androidx.navigation.dynamicfeatures
+attr graphPackage
+attr graphResName
+attr moduleName
+attr progressDestination
+raw keep
+styleable DynamicActivityNavigator moduleName
+styleable DynamicGraphNavigator moduleName progressDestination
+styleable DynamicIncludeGraphNavigator graphPackage graphResName moduleName

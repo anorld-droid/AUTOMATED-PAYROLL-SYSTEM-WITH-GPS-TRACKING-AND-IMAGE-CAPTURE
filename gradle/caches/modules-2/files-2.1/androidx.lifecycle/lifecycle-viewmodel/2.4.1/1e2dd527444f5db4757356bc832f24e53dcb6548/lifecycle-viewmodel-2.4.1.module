@@ -1,0 +1,110 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-viewmodel",
+    "version": "2.4.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.30"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-2.4.1.aar",
+          "url": "lifecycle-viewmodel-2.4.1.aar",
+          "size": 19063,
+          "sha512": "b6e858364814eeb1f7fe35f6742052c5e3988d9d6c30167cb8a74abf1d4427f55914ba58a74abe0517718d8a46d66e5817888fec30db87e3866c12fc31c4cf73",
+          "sha256": "fd79a580f92a8eb518fc3f5cca187c2bdc6b54f70884263514b310eef2fb3611",
+          "sha1": "40052dacd800f02a538c0267f719aa167c3cb56f",
+          "md5": "0cd8d5f71055ff99b79be3c6bd6eff2b"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.30"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-2.4.1.aar",
+          "url": "lifecycle-viewmodel-2.4.1.aar",
+          "size": 19063,
+          "sha512": "b6e858364814eeb1f7fe35f6742052c5e3988d9d6c30167cb8a74abf1d4427f55914ba58a74abe0517718d8a46d66e5817888fec30db87e3866c12fc31c4cf73",
+          "sha256": "fd79a580f92a8eb518fc3f5cca187c2bdc6b54f70884263514b310eef2fb3611",
+          "sha1": "40052dacd800f02a538c0267f719aa167c3cb56f",
+          "md5": "0cd8d5f71055ff99b79be3c6bd6eff2b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-2.4.1-sources.jar",
+          "url": "lifecycle-viewmodel-2.4.1-sources.jar",
+          "size": 12799,
+          "sha512": "b728bb2a1b2c4225315402dbc55b952f4ba31bad3f2d6285663b471ecf50813a8447a6b3bdf156d48adccf6f481c5a6ee61737f724204e363b8ca61b8b8e847b",
+          "sha256": "21535e6920d73491c75aefc6ca6fd2217ecaf3eedfb474736c35d2870be6dd2d",
+          "sha1": "c5e216fe2f1b1de75552f99f5a562ae89f7d7b84",
+          "md5": "9046ce6463b0567e3a8fd6e3b920ad1b"
+        }
+      ]
+    }
+  ]
+}
