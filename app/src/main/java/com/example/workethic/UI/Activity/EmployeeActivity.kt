@@ -46,7 +46,7 @@ class EmployeeActivity : AppCompatActivity() {
         binding.bottomNav.setupWithNavController(navController)
 
 
-        postToServerPeriodically()
+       // postToServerPeriodically()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

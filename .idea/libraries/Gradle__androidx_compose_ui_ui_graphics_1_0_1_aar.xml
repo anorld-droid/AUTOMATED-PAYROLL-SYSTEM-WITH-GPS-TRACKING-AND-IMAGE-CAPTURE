@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.compose.ui:ui-graphics:1.0.1@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/gradle/caches/transforms-3/c9866d5d0d168afdcb8009aef5d71a19/transformed/ui-graphics-1.0.1/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/gradle/caches/transforms-3/c9866d5d0d168afdcb8009aef5d71a19/transformed/ui-graphics-1.0.1/res" />
-      <root url="file://$PROJECT_DIR$/gradle/caches/transforms-3/c9866d5d0d168afdcb8009aef5d71a19/transformed/ui-graphics-1.0.1/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../WorkEthic/gradle/caches/transforms-3/c9866d5d0d168afdcb8009aef5d71a19/transformed/ui-graphics-1.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../WorkEthic/gradle/caches/transforms-3/c9866d5d0d168afdcb8009aef5d71a19/transformed/ui-graphics-1.0.1/res" />
+      <root url="file://$PROJECT_DIR$/../WorkEthic/gradle/caches/transforms-3/c9866d5d0d168afdcb8009aef5d71a19/transformed/ui-graphics-1.0.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/gradle/caches/modules-2/files-2.1/androidx.compose.ui/ui-graphics/1.0.1/99e2112f5a1a0c64eff13c5543ba1bf1a9a3c3a3/ui-graphics-1.0.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../WorkEthic/gradle/caches/modules-2/files-2.1/androidx.compose.ui/ui-graphics/1.0.1/99e2112f5a1a0c64eff13c5543ba1bf1a9a3c3a3/ui-graphics-1.0.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

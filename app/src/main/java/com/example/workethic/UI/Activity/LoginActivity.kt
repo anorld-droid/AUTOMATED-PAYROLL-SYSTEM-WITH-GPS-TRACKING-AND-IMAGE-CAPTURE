@@ -56,7 +56,7 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
         }
         binding.loginButton.setOnClickListener {
-            oneTimeWork()
+           // oneTimeWork()
             if (checkUserLocation() <= RADIUS) {
                 sendCommandsToService(START_SERVICE)
                 val intent = Intent(this, EmployeeActivity::class.java)

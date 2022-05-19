@@ -32,6 +32,6 @@ const val NOTIFICATION_GEO_NAME = "NOTIFICATION_GEO_NAME"
 const val GEO_ID = 2
 
 //Aunthetification
-const val AUNTHETIFICATION = "Token acee6b6778401c9322ed54f6eb7aad1182dc61e4"
+const val AUNTHETIFICATION = "Token 0905056d358068d799328f76879f6bc74b36deec"
 
 const val BASEURL = "https://apsapi.herokuapp.com/"
