@@ -45,62 +45,48 @@ class FragmentProfile : Fragment() {
 
 
        // create employee_data_object
-        var results = mutableListOf<Result>()
-        val result = Result(
-            Department("Maths"),
-            "Vincent",
-            "2022-05-19",
-            "CCS0093",
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fnerd-for-tech%2Fintroduction-to-git-and-github-for-beginners-cb52d3ac7d6f&psig=AOvVaw1U1fW3BxQLKw6nWbZhXWZf&ust=1652965331097000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLDxu-uN6fcCFQAAAAAdAAAAABAI",
-            "Trade Marketer",
-            "Munene",
-            Location("1332423l:236846N", "", ""),
-            "Emmanuel",
-            Salary(120000, 50000),
-            1
-        )
-        results.add(result)
-
-        //create employee
-        val employee_data = Employee(results)
-        lifecycleScope.launchWhenCreated {
-//            val post = Posts("my commet"
-//                ,"Comment",104)
-
-
-            val response = try {
-                ServiceBuilder.api.postToServer(AUNTHETIFICATION,employee_data)
-
-            }catch (e:IOException) {
-                Log.d("NORES", "onCreateView: No internet")
-                return@launchWhenCreated
-
-            }catch (e:HttpException){
-                Log.d("NORES", "onCreateView: http error")
-                return@launchWhenCreated
-            }
-            if(response.isSuccessful && response.body()!=null){
-                Log.d("MYRES", "onResponse: ${response.body()}\n ${response.code()}")
-
-            }else{
-                Log.d("NORES", "onResponse:not successful ${response.message()}")
-            }
-
-//            val response = ServiceBuilder.api.postPosts(post)
-//            response.enqueue(object:Callback<Posts>{
-//                override fun onResponse(call: Call<Posts>, response: Response<Posts>) {
-//                    if (response.isSuccessful && response.body()!=null){
-//                        Log.d("MYRES", "onResponse: ${response.body()}\n ${response.code()}")
-//                    }else{
-//                        Log.d("NORES", "onResponse:not successful ")
-//                    }
-//                }
+//        var results = mutableListOf<Result>()
+//        val result = Result(
+//            Department("Maths"),
+//            "Vincent",
+//            "2022-05-19",
+//            "CCS0093",
+//            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fnerd-for-tech%2Fintroduction-to-git-and-github-for-beginners-cb52d3ac7d6f&psig=AOvVaw1U1fW3BxQLKw6nWbZhXWZf&ust=1652965331097000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLDxu-uN6fcCFQAAAAAdAAAAABAI",
+//            "Trade Marketer",
+//            "Munene",
+//            Location("1332423l:236846N", "", ""),
+//            "Emmanuel",
+//            Salary(120000, 50000),
+//            1
+//        )
+//        results.add(result)
 //
-//                override fun onFailure(call: Call<Posts>, t: Throwable) {
-//                    Log.d("NORES", "onFailure: failed ${t.message.toString()}")                }
+//        //create employee
+//        val employee_data = Employee(results)
+//        lifecycleScope.launchWhenCreated {
 //
-//            })
-        }
+//
+//
+//            val response = try {
+//                ServiceBuilder.api.postToServer(AUNTHETIFICATION,employee_data)
+//
+//            }catch (e:IOException) {
+//                Log.d("NORES", "onCreateView: No internet")
+//                return@launchWhenCreated
+//
+//            }catch (e:HttpException){
+//                Log.d("NORES", "onCreateView: http error")
+//                return@launchWhenCreated
+//            }
+//            if(response.isSuccessful && response.body()!=null){
+//                Log.d("MYRES", "onResponse: ${response.body()}\n ${response.code()}")
+//
+//            }else{
+//                Log.d("NORES", "onResponse:not successful ${response.message()}")
+//            }
+//
+//
+//        }
 
 
         return binding.root

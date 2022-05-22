@@ -49,25 +49,25 @@ class EmployeeActivity : AppCompatActivity() {
        // postToServerPeriodically()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.log_out_menu, menu)
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.log_out_menu, menu)
+//
+//        return true
+//    }
 
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.log_out -> {
-                sendCommandsToService(STOP_SERVICE)
-                ForeGroundService.isLoggedIn.postValue(false)
-                WorkManager.getInstance(applicationContext).cancelAllWorkByTag("postingToServer")
-                Intent(this, LoginActivity::class.java).also {
-                    startActivity(it)
-                }
-            }
-        }
-        return true
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.log_out -> {
+//                sendCommandsToService(STOP_SERVICE)
+//                ForeGroundService.isLoggedIn.postValue(false)
+//                WorkManager.getInstance(applicationContext).cancelAllWorkByTag("postingToServer")
+//                Intent(this, LoginActivity::class.java).also {
+//                    startActivity(it)
+//                }
+//            }
+//        }
+//        return true
+//    }
 
     //send commands
     private fun sendCommandsToService(action: String) {

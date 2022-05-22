@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.activity:activity:1.6.0-alpha04@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../WorkEthic/gradle/caches/transforms-3/b21e965442cbfafcb7a536de4671271c/transformed/activity-1.6.0-alpha04/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../WorkEthic/gradle/caches/transforms-3/b21e965442cbfafcb7a536de4671271c/transformed/activity-1.6.0-alpha04/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../WorkEthic/gradle/caches/transforms-3/b21e965442cbfafcb7a536de4671271c/transformed/activity-1.6.0-alpha04/res" />
+      <root url="file://$PROJECT_DIR$/../WorkEthic/gradle/caches/transforms-3/b21e965442cbfafcb7a536de4671271c/transformed/activity-1.6.0-alpha04/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../WorkEthic/gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.6.0-alpha04/e80345cf3455a12f730e1dc023b898e60424b465/activity-1.6.0-alpha04-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
