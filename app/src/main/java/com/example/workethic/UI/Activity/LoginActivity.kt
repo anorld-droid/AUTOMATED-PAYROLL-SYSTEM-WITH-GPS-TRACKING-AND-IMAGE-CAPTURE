@@ -21,15 +21,14 @@ import androidx.lifecycle.lifecycleScope
 import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
-import com.example.workethic.Pojo.DefineOneTimeWork
-import com.example.workethic.Pojo.Employee
-import com.example.workethic.Pojo.HasPermissions
-import com.example.workethic.Pojo.InternalStorage
+import com.example.workethic.Pojo.*
 import com.example.workethic.Retrofit.ServiceBuilder
 import com.example.workethic.Service.ForeGroundService
 import com.example.workethic.databinding.LoginActivityBinding
 import com.example.workethic.util.*
 import com.google.android.gms.location.*
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
 import kotlinx.coroutines.Dispatchers
@@ -37,14 +36,18 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType
 import okhttp3.MultipartBody
+import okhttp3.OkHttpClient
 import okhttp3.RequestBody
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.HttpException
 import retrofit2.Response
+import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.io.IOException
 import java.util.*
+import kotlin.collections.HashMap
 import kotlin.math.log
 
 class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
@@ -68,9 +71,9 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
             LocationServices.getFusedLocationProviderClient(this)
         //take photo
         val takePhoto = registerForActivityResult(ActivityResultContracts.TakePicturePreview()) {
-            val succcess = saveToInternalStorage(UUID.randomUUID().toString(), it!!)
+            val succcess = saveToInternalStorage("Mypic", it!!)
             if (succcess) {
-                loadToImageView()
+                //loadToImageView()
                 Toast.makeText(this, "success ${filesDir}", Toast.LENGTH_SHORT).show()
 
             } else {
@@ -78,6 +81,29 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
             }
         }
+//map for values to upload
+        val string_map: HashMap<String, RequestBody> = HashMap()
+        val int_map: HashMap<String, Int> = HashMap()
+
+
+        //put values
+        string_map.put("owner", mapToRequestBody("Admin"))
+        string_map.put("id", mapToRequestBody("MYIDadfjheuhiereu"))
+        string_map.put("first_name", mapToRequestBody("Kirui"))
+        string_map.put("last_name", mapToRequestBody("PAtro"))
+        string_map.put("hire_date", mapToRequestBody("2022-05-08"))
+        string_map.put("job_name", mapToRequestBody("IT"))
+        string_map.put("department.name", mapToRequestBody("IT support"))
+        string_map.put("location.one_hour", mapToRequestBody("1332423l:236846N"))
+        string_map.put("location.two_hours", mapToRequestBody("1332423l:236846N"))
+        string_map.put("location.three_hours", mapToRequestBody("1332423l:236846N"))
+        string_map.put("status", mapToRequestBody("1"))
+        string_map.put("salary.basic_salary", mapToRequestBody("100000"))
+        string_map["salary.commission"] = mapToRequestBody("10000")
+
+
+
+
 
         binding.ivImage.setOnClickListener {
             takePhoto.launch()
@@ -97,55 +123,44 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
                     } else {
                         Toast.makeText(
                             this,
-                            "${filesDir.listFiles().get(0).name}",
+                            "${filesDir.listFiles()?.get(0)?.name}",
                             Toast.LENGTH_SHORT
                         ).show()
                         val image_body =
-                            file.get(0).let { it1 ->
+                            file.get(1).let { it1 ->
                                 RequestBody.create(
                                     MediaType.parse("multipart/form-data"),
                                     it1
                                 )
                             }
                         // upload
+                        val image = image_body?.let { it1 ->
+                            MultipartBody.Part.createFormData(
+                                "image", file.get(0).name,
+                                it1
+                            )
+                        }
+
                         ServiceBuilder.api.postToServer(
                             AUNTHETIFICATION,
-                            "Admin",
-                            "CCAD",
-                            "Emily",
-                            "Noch",
-                            image_body?.let { it1 ->
-                                MultipartBody.Part.createFormData(
-                                    "image", file.get(0).name,
-                                    it1
-                                )
-                            },
-                            "ITSIpport",
-                            "2022-05-08",
-                            1,
-                            "Maths",
-                            50000,
-                            10000,
-                            "1332423l:236846N",
-                            "1332423l:236846N",
-                            "1332423l:236846N"
-
-                        ).enqueue(object : Callback<Employee> {
+                            string_map,
+                            image,
+                        ).enqueue(object : Callback<Result> {
                             override fun onResponse(
-                                call: Call<Employee>,
-                                response: Response<Employee>
+                                call: Call<Result>,
+                                response: Response<Result>
                             ) {
                                 if (response.isSuccessful && response.body() != null) {
                                     Log.d("MYRES", "onResponse: ${response.body()}")
                                 } else {
                                     Log.d(
                                         "MyError",
-                                        "onResponse: not succesful ${response.message()}"
+                                        "onResponse: not succesful ${response.errorBody()?.charStream()?.readText()} ${response.code()}"
                                     )
                                 }
                             }
 
-                            override fun onFailure(call: Call<Employee>, t: Throwable) {
+                            override fun onFailure(call: Call<Result>, t: Throwable) {
                                 Log.d("MYERR", "onFailure: ${t.message.toString()}")
                             }
                         })
@@ -281,7 +296,6 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
     }
 
-
     //save image to internal storage
     private fun saveToInternalStorage(name: String, bitmap: Bitmap): Boolean {
         return try {
@@ -321,6 +335,10 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         val photo = photos?.get(0)
 
 
+    }
+
+    private fun mapToRequestBody(value: String): RequestBody {
+        return RequestBody.create(MultipartBody.FORM, value)
     }
 
 }
