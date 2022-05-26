@@ -18,10 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WorkEthic">
-        <activity
+        <activity android:launchMode="singleTask"
             android:name=".UI.Activity.EmployeeActivity"
             android:exported="false" />
         <activity
+            android:launchMode="singleTask"
             android:name=".UI.Activity.LoginActivity"
             android:exported="true">
             <intent-filter>

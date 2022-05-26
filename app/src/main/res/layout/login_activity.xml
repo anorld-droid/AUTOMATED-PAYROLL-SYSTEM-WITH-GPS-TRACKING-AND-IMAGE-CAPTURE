@@ -55,6 +55,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/id_edit_text_input"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>

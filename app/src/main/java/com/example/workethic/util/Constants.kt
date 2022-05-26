@@ -1,7 +1,6 @@
 package com.example.workethic.util
 
 const val REQUEST_CODE = 1
-const val CAMERA_INTENT_CODE = 2
 
 
 //services

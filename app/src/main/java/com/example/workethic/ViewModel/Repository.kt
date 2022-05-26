@@ -1,13 +1,18 @@
-//package com.example.workethic.ViewModel
-//
-//import com.example.workethic.Pojo.Employee
-//import com.example.workethic.Pojo.Result
-//import com.example.workethic.Retrofit.RetrofitApi
-//import retrofit2.Call
-//import retrofit2.Response
-//
-//class Repository(private val retrofitApi: RetrofitApi) {
-//    suspend fun postToServer(employeeData:Result):Response<Result>{
-//        return  retrofitApi.postToServer(employeeData)
-//    }
-//}
+package com.example.workethic.ViewModel
+
+
+import com.example.workethic.Retrofit.RetrofitApi
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+
+
+class Repository(private val retrofitApi: RetrofitApi) {
+    fun updateUserDetails(
+        token: String,
+        id: String,
+        body: HashMap<String, RequestBody>,
+        image: MultipartBody.Part?
+    ) = retrofitApi.updateUserDetails(token, id, body, image)
+
+    fun getListOfEmployees() = retrofitApi.getListofEmployees()
+}

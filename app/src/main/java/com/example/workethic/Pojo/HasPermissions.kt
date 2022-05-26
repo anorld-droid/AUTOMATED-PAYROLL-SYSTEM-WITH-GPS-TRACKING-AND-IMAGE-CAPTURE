@@ -6,8 +6,8 @@ import android.os.Build.VERSION_CODES.Q
 import com.vmadalin.easypermissions.EasyPermissions
 
 object HasPermissions {
-   fun hasPermissions(context: Context): Boolean {
-        val hasPermission = if (Build.VERSION.SDK_INT < Q) {
+   fun hasPermissions(context: Context) =
+         if (Build.VERSION.SDK_INT < Q) {
             EasyPermissions.hasPermissions(
                 context,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -23,7 +23,5 @@ object HasPermissions {
             )
         }
 
-        return hasPermission
 
-    }
 }
