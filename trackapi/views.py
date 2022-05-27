@@ -1,3 +1,4 @@
+from functools import partial
 from rest_framework import permissions
 from .models import Employee
 from .serializers import EmployeeSerializer, UserSerializer
@@ -22,6 +23,16 @@ class EmployeeList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+    def patch(self, request, id=None):
+        employee = Employee.objects.get(id=id)
+        serializer = EmployeeSerializer(
+            employee, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"status": "Success", "data": serializer.data})
+        else:
+            return Response({"status": "Error", "data": serializer.errors})
 
 
 class EmployeeDetail(generics.RetrieveUpdateDestroyAPIView):

@@ -16,10 +16,6 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
         Token.objects.create(user=instance)
 
 
-# for user in User.objects.all():
-#     Token.objects.get_or_create(user=user)
-
-
 class Department(models.Model):
     name = models.CharField(blank=False, null=False, max_length=70)
 
