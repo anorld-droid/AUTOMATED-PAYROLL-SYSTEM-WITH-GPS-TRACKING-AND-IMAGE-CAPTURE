@@ -18,9 +18,14 @@ import androidx.annotation.ColorInt
 import androidx.compose.ui.graphics.Color
 import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.workethic.Pojo.GeofenceBroadCastReceiver
 import com.example.workethic.Pojo.HasPermissions
 import com.example.workethic.R
+import com.example.workethic.Retrofit.ServiceBuilder
+import com.example.workethic.ViewModel.MainviewModel
+import com.example.workethic.ViewModel.RecViewModelFactory
+import com.example.workethic.ViewModel.Repository
 import com.example.workethic.databinding.FragmentHomeBinding
 import com.example.workethic.util.*
 import com.google.android.gms.location.*
@@ -114,18 +119,10 @@ class FragmentHome : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
             var pos = LatLng(LATITUDE, LONGITUDE)
             placeMarkerAndGeofence(pos)
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pos,18f))
-            fusedLocationProviderClient.lastLocation.addOnSuccessListener {
-//                if (it != null) {
-//                    lastLocation = it
-//                    var pos = LatLng(lastLocation.latitude, lastLocation.longitude)
-//                    placeMarkerAndGeofence(pos)
-//                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pos, 18f))
-//
-//                }
-            }
 
         }
     }
+
 
     private fun placeMarkerAndGeofence(pos: LatLng) {
         val markerOptions = MarkerOptions().position(pos)

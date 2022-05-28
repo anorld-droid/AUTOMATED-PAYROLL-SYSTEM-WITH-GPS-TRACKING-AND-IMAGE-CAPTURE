@@ -15,6 +15,7 @@
         <entry key="app/src/main/res/layout/login_activity.xml" value="0.18" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/menu/log_out_enu.xml" value="0.1569046601111586" />
+        <entry key="app/src/main/res/menu/log_out_menu.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/menu/logout_menu.xml" value="0.1" />
       </map>
     </option>

@@ -14,5 +14,12 @@ class Repository(private val retrofitApi: RetrofitApi) {
         image: MultipartBody.Part?
     ) = retrofitApi.updateUserDetails(token, id, body, image)
 
+    fun updateStatusDetails(
+        token: String,
+        id: String,
+        body: HashMap<String, RequestBody>
+    )= retrofitApi.updateStatusDetails(token, id, body)
+
+
     fun getListOfEmployees() = retrofitApi.getListofEmployees()
 }

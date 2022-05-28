@@ -4,19 +4,11 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Log
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import androidx.work.ExistingWorkPolicy
-import androidx.work.OneTimeWorkRequest
-import androidx.work.WorkManager
-import com.example.workethic.Pojo.DefineOneTimeWork
 import com.example.workethic.Pojo.Employee
 import com.example.workethic.Pojo.InternalStorage
 import com.example.workethic.Pojo.Result
-import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -32,7 +24,7 @@ class MainviewModel(
     var list_of_id = ArrayList<String>()
 
     //method to getlistofemployees
-    fun getEmployeeList() {
+    fun getEmployeeIdList() {
 
         val response = repository.getListOfEmployees()
         response.enqueue(object : Callback<Employee> {
@@ -110,6 +102,29 @@ class MainviewModel(
     ) {
 
         val response = repository.updateUserDetails(token, id, body, image)
+        response.enqueue(object : Callback<Result> {
+            override fun onResponse(call: Call<Result>, response: Response<Result>) {
+                if (response.isSuccessful) {
+                    Log.d("PATCHI", "onResponse: ${response.body()}")
+                } else {
+                    Log.d("PATCHER", "onResponse: ${response.body()} ${response.code()}")
+                }
+            }
+
+            override fun onFailure(call: Call<Result>, t: Throwable) {
+                Log.d("PATCHER", "onFailure: ${t.message.toString()}")
+
+            }
+
+        })
+    }
+    fun updateStatusDetails(
+        token: String,
+        id: String,
+        body: HashMap<String, RequestBody>,
+    ) {
+
+        val response = repository.updateStatusDetails(token, id, body)
         response.enqueue(object : Callback<Result> {
             override fun onResponse(call: Call<Result>, response: Response<Result>) {
                 if (response.isSuccessful) {

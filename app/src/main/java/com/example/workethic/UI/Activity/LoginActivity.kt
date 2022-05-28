@@ -74,8 +74,6 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
     //Image Request body
     private lateinit var image_body: RequestBody
 
-    //user id
-    private lateinit var id: String
 
     //map
     val string_map: HashMap<String, RequestBody> = HashMap()
@@ -86,6 +84,8 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         setContentView(binding.root)
 
         requestPermissions()
+        //preload ids
+        _mViewModel.getEmployeeIdList()
 
 
         navigateToEmployeeActivity(intent)//incase activity was destroyed
@@ -113,20 +113,10 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         }
 
 
-        //put values
-//        string_map.put("owner", mapToRequestBody("Admin"))
-//        string_map.put("id", mapToRequestBody("MYIDadfjheuhiereu"))
-//        string_map.put("first_name", mapToRequestBody("Kirui"))
-//        string_map.put("last_name", mapToRequestBody("PAtro"))
-//        string_map.put("hire_date", mapToRequestBody("2022-05-08"))
-//        string_map.put("job_name", mapToRequestBody("IT"))
-//        string_map.put("department.name", mapToRequestBody("IT support"))
-//        string_map.put("location.one_hour", mapToRequestBody("1332423l:236846N"))
-//        string_map.put("location.two_hours", mapToRequestBody("1332423l:236846N"))
-//        string_map.put("location.three_hours", mapToRequestBody("1332423l:236846N"))
+        //put status values
+
         string_map.put("status", mapToRequestBody("1"))
-//        string_map.put("salary.basic_salary", mapToRequestBody("100000"))
-//        string_map["salary.commission"] = mapToRequestBody("10000")
+
 
 
         binding.ivImage.setOnClickListener {
@@ -139,52 +129,11 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         }
         binding.loginButton.setOnClickListener {
             // requestPermissions()
-            _mViewModel.getEmployeeList()
-            validateUsrInput()
-            //update user details
 
-            // Log.d("IDS", "onCreate:${_mViewModel.results.value} ")
-            // oneTimeWork()
+            validateUserInputAndUpdate()
 
-//                        // upload
-//                        val image = image_body?.let { it1 ->
-//                            MultipartBody.Part.createFormData(
-//                                "image", file.get(0).name,
-//                                it1
-//                            )
-//                        }
-//
-//                        ServiceBuilder.api.postToServer(
-//                            AUNTHETIFICATION,
-//                            string_map,
-//                            image,
-//                        ).enqueue(object : Callback<Result> {
-//                            override fun onResponse(
-//                                call: Call<Result>,
-//                                response: Response<Result>
-//                            ) {
-//                                if (response.isSuccessful && response.body() != null) {
-//                                    Log.d("MYRES", "onResponse: ${response.body()}")
-//                                } else {
-//                                    Log.d(
-//                                        "MyError",
-//                                        "onResponse: not succesful ${
-//                                            response.errorBody()?.charStream()?.readText()
-//                                        } ${response.code()}"
-//                                    )
-//                                }
-//                            }
-//
-//                            override fun onFailure(call: Call<Result>, t: Throwable) {
-//                                Log.d("MYERR", "onFailure: ${t.message.toString()}")
-//                            }
-//                        })
-//                    }
-//                }
-//                sendCommandsToService(START_SERVICE)
-//                val intent = Intent(this, EmployeeActivity::class.java)
-//                startActivity(intent)
-//                Log.d("SID", "onCreate: successful ${checkUserLocation()}")
+
+            Log.d("SID", "onCreate: successful ${checkUserLocation()}")
 
 
         }
@@ -316,7 +265,7 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
     }
 
     //validate user inoput
-    private fun validateUsrInput() {
+    private fun validateUserInputAndUpdate() {
         val files = _mViewModel.listOfImages(this)
 
         if (binding.idEditTextInput.text == null || files.isEmpty()) {
@@ -329,7 +278,7 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
             Toast.makeText(this, "Please check your ID and try again", Toast.LENGTH_SHORT).show()
             return
         }
-        id = user_id
+        GetId_statusState.id = user_id
         image_body =
             files[0].let { it1 ->
                 RequestBody.create(
@@ -337,13 +286,20 @@ class LoginActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
                     it1
                 )
             }
+
+        sendCommandsToService(START_SERVICE)
+        val intent = Intent(this, EmployeeActivity::class.java)
+        startActivity(intent)
+
         _mViewModel.updateUserDetails(
             AUNTHETIFICATION,
-            id,
+            GetId_statusState.id,
             string_map,
             MultipartBody.Part.createFormData("image", files[0].name, image_body)
 
         )
+
+        _mViewModel.deleteFileFromInternalStorage(this, getImageName())
     }
 
 

@@ -33,89 +33,21 @@ import java.util.jar.Manifest
 
 
 class ForeGroundService : LifecycleService() {
-    lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 
     companion object {
         //check if logged in
         val isLoggedIn = MutableLiveData<Boolean>()
-
-        //store list of location coordinates
-        val locationsList = MutableLiveData<MutableList<LatLng>>()
     }
 
     override fun onCreate() {
         super.onCreate()
-        initialValues()
-        fusedLocationProviderClient = FusedLocationProviderClient(this)
-
-        isLoggedIn.observe(this, Observer {
-            updateLocation(it)
-        })
+        initialValue()
     }
 
-    private fun initialValues() {
+    private fun initialValue() {
         isLoggedIn.postValue(false)
-        locationsList.postValue(mutableListOf())
     }
 
-    //update locations
-    @SuppressLint("MissingPermission")
-    private fun updateLocation(isLoggedIn: Boolean) {
-        if (isLoggedIn) {
-            if (HasPermissions.hasPermissions(this)) {
-                val request = LocationRequest.create().apply {
-                    interval = LOCATION_UPDATE_INTERVAL
-                    fastestInterval = FASTEST_LOCATION_INTERVAL
-                    priority = PRIORITY_HIGH_ACCURACY
-
-                }
-                fusedLocationProviderClient.requestLocationUpdates(
-                    request,
-                    locationCallback,
-                    Looper.getMainLooper()
-                )
-            }
-        } else {
-            fusedLocationProviderClient.removeLocationUpdates(locationCallback)
-        }
-
-    }
-
-
-    //Define call back for location updates
-    val locationCallback = object : LocationCallback() {
-        override fun onLocationResult(result: LocationResult) {
-            super.onLocationResult(result)
-
-            if (isLoggedIn.value!!) {
-                //getting location regulary
-                result.locations.let { locations ->
-                    for (location in locations) {
-                        addLocation(location)
-                       // Log.d("LocTest", "Location: ${location}")
-
-                    }
-
-                }
-
-
-            }
-        }
-    }
-
-
-    //Add Location to List
-    private fun addLocation(location: Location?) {
-        location?.let {
-            val pos = LatLng(location.latitude, location.longitude)
-            locationsList.value?.apply {
-
-                add(pos)
-                locationsList.postValue(this)
-            }
-        }
-
-    }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         intent?.let {

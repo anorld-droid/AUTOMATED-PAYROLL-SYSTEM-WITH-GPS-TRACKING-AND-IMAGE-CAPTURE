@@ -19,6 +19,14 @@ interface RetrofitApi {
         @Part image: MultipartBody.Part?
     ): Call<Result>
 
+    @Multipart
+    @PATCH("employee/{id}/")
+    fun updateStatusDetails(
+        @Header("Authorization") token: String,
+        @Path("id") id:String,
+        @PartMap body: HashMap<String, RequestBody>,
+    ): Call<Result>
+
     @GET("employees")
     fun getListofEmployees():Call<Employee>
 }
