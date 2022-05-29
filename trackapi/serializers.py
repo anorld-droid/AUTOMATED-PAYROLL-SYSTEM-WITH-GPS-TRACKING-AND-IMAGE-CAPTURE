@@ -1,7 +1,8 @@
 from dataclasses import fields
+import datetime
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import Department, Employee, Salary, Location
+from .models import Department, Employee, Onsite, Salary, Offsite
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -19,10 +20,22 @@ class SalarySerializer(serializers.ModelSerializer):
         fields = ['basic_salary', 'commission']
 
 
-class LocationSerializer(serializers.ModelSerializer):
+class OnsiteSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Location
-        fields = ['one_hour', 'two_hours', 'three_hours']
+        model = Onsite
+        fields = ['onsite_time']
+
+    def to_representation(self, value):
+        return value.onsite_time
+
+
+class OffsiteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Offsite
+        fields = ['offsite_time']
+
+    def to_representation(self, value):
+        return value.offsite_time
 
 
 class DepartmentSerielizer(serializers.ModelSerializer):
@@ -35,20 +48,22 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     department = DepartmentSerielizer()
     salary = SalarySerializer()
-    location = LocationSerializer()
+    onsites = OnsiteSerializer(many=True)
+    offsites = OffsiteSerializer(many=True)
 
     class Meta:
         model = Employee
         fields = ['owner', 'id', 'first_name', 'last_name', 'image', 'job_name', 'hire_date',
-                  'status', 'department', 'salary', 'location']
+                  'status', 'department', 'salary', 'onsites', 'offsites']
 
     def create(self, validated_data):
         department = Department.objects.create(
             **validated_data.pop('department'))
         salary = Salary.objects.create(**validated_data.pop('salary'))
-        location = Location.objects.create(**validated_data.pop('location'))
+        onsites = Onsite.objects.create(**validated_data.pop('onsites'))
+        offsites = Offsite.objects.create(**validated_data.pop('offsites'))
         employee = Employee.objects.create(
-            **validated_data, department=department, salary=salary, location=location)
+            **validated_data, department=department, salary=salary, onsites=onsites, offsites=offsites)
         return employee
 
     def update(self, instance, validated_data):
@@ -60,24 +75,52 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
         instance.image = validated_data.get('image', instance.image)
         instance.job_name = validated_data.get('job_name', instance.job_name)
         instance.status = validated_data.get('status', instance.status)
+
+        if 'department' in validated_data:
+            department_data = validated_data.pop('department')
+            department = instance.department
+            department.name = department_data.get('name', department.name)
+            department.save()
+
+        if 'salary' in validated_data:
+            salary_data = validated_data.pop('salary')
+            salary = instance.salary
+            salary.basic_salary = salary_data.get(
+                'basic_salary', salary.basic_salary)
+            salary.commission = salary_data.get(
+                'commission', salary.commission)
+            if not instance.status:
+                tnow = datetime.datetime.now()
+                y = tnow.date().year
+                m = tnow.date().month
+                d = tnow.date().day
+                if datetime.datetime(y, m, d, 16, 00, 00, 0000) <= tnow:
+                    timed = tnow - datetime.datetime(y, m, d, 11, 00, 00, 0000)
+                    tsec = timed.total_seconds()
+                    thour = tsec / 3600
+                    comm = thour * 3600
+                    salary.commission += comm
+            salary.save()
+
+        if 'onsites' in validated_data:
+            onsite_data = validated_data.pop('onsites')
+            onsites = []
+            for time in onsite_data:
+                onsite_instance, onsite_created = Onsite.objects.update_or_create(
+                    pk=time.get('id'), defaults=time)
+                if onsite_created:
+                    onsites.append(onsite_instance.pk)
+            instance.onsites.set(onsites)
+
+        if 'offsites' in validated_data:
+            offsite_data = validated_data.pop('offsites')
+            offsites = []
+            for time in offsite_data:
+                offsite_instance, offsite_created = Offsite.objects.update_or_create(
+                    pk=time.get('id'), defaults=time)
+                if offsite_created:
+                    offsites.append(offsite_instance.pk)
+            instance.offsites.set(offsites)
+
         instance.save()
-        department_data = validated_data.pop('department')
-        department = instance.department
-        department.name = department_data.get('name', department.name)
-        department.save()
-        salary_data = validated_data.pop('salary')
-        salary = instance.salary
-        salary.basic_salary = salary_data.get(
-            'basic_salary', salary.basic_salary)
-        salary.commission = salary_data.get('commission', salary.commission)
-        salary.save
-
-        location_data = validated_data.pop('location')
-        location = instance.location
-        location.one_hour = location_data.get('one_hour', location.one_hour)
-        location.two_hours = location_data.get('two_hours', location.two_hours)
-        location.three_hours = location_data.get(
-            'three_hours', location.three_hours)
-        location.save
-
         return instance

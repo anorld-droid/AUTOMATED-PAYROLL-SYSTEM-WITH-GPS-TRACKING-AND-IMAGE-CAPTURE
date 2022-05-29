@@ -1,3 +1,4 @@
+from datetime import datetime
 from email.policy import default
 from django.db import models
 # Create your models here.
@@ -25,10 +26,12 @@ class Salary(models.Model):
     commission = models.IntegerField()
 
 
-class Location(models.Model):
-    one_hour = models.CharField(blank=True, null=True, max_length=100)
-    two_hours = models.CharField(blank=True, null=True, max_length=100)
-    three_hours = models.CharField(blank=True, null=True, max_length=100)
+class Onsite(models.Model):
+    onsite_time = models.DateTimeField(blank=False,)
+
+
+class Offsite(models.Model):
+    offsite_time = models.DateTimeField(blank=False,)
 
 
 def employee_directory_path(instance, filename):
@@ -38,8 +41,6 @@ def employee_directory_path(instance, filename):
 
 class Employee(models.Model):
     STATUS_CHOICES = [(0, 'OFF'), (1, 'ON')]
-    owner = models.ForeignKey(
-        'auth.User', related_name='employees', on_delete=models.CASCADE, null=False)
     id = models.CharField(blank=False, null=False,
                           max_length=100, primary_key=True, unique=True)
     first_name = models.CharField(blank=False, null=False, max_length=70)
@@ -48,10 +49,13 @@ class Employee(models.Model):
         upload_to=employee_directory_path, height_field=None, width_field=None, max_length=100, null=False)
     job_name = models.CharField(blank=False, null=False, max_length=50)
     hire_date = models.DateField(blank=False)
+    owner = models.ForeignKey(
+        'auth.User', related_name='employees', on_delete=models.CASCADE, null=False)
     status = models.IntegerField(choices=STATUS_CHOICES, default='OFF')
     salary = models.ForeignKey(Salary, on_delete=models.CASCADE)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    onsites = models.ManyToManyField(Onsite)
+    offsites = models.ManyToManyField(Offsite)
 
     class Meta:
         ordering = ['hire_date']
