@@ -34,11 +34,6 @@ class Offsite(models.Model):
     offsite_time = models.DateTimeField(blank=True, null=False)
 
 
-def employee_directory_path(instance, filename):
-    # file will be uploaded to MEDIA_ROOT / employee_<id>/<filename>
-    return 'employee_{0}/{1}'.format(instance.id, filename)
-
-
 class Employee(models.Model):
     STATUS_CHOICES = [(0, 'OFF'), (1, 'ON')]
     id = models.CharField(blank=False, null=False,
@@ -46,7 +41,7 @@ class Employee(models.Model):
     first_name = models.CharField(blank=False, null=False, max_length=70)
     last_name = models.CharField(blank=False, null=False, max_length=70)
     image = models.ImageField(
-        upload_to=employee_directory_path, height_field=None, width_field=None, max_length=100, null=False)
+        upload_to='images/', height_field=None, width_field=None, max_length=100, null=False)
     job_name = models.CharField(blank=False, null=False, max_length=50)
     hire_date = models.DateField(blank=False)
     owner = models.ForeignKey(
