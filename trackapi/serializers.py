@@ -101,7 +101,26 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
                     comm = thour * 3600
                     salary.commission += comm
             salary.save()
+        else:
+            salary_data = Employee.objects.get(
+                id=instance.id).salary
+            salary = instance.salary
+            salary.basic_salary = salary_data.basic_salary
+            salary.commission = salary_data.commission
+            if not instance.status:
+                tnow = datetime.datetime.now()
+                y = tnow.date().year
+                m = tnow.date().month
+                d = tnow.date().day
+                if datetime.datetime(y, m, d, 16, 00, 00, 0000) <= tnow:
+                    timed = tnow - datetime.datetime(y, m, d, 11, 00, 00, 0000)
+                    tsec = timed.total_seconds()
+                    thour = tsec / 3600
+                    comm = thour * 3600
+                    salary.commission += comm
+            salary.save()
 
+        tnow = f"{datetime.datetime.now()}"
         if 'onsites' in validated_data:
             onsite_data = validated_data.pop('onsites')
             onsites = []
@@ -110,7 +129,22 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
                     pk=time.get('id'), defaults=time)
                 if onsite_created:
                     onsites.append(onsite_instance.pk)
-            instance.onsites.set(onsites)
+            if instance.status:
+                onsite_instance = Onsite.objects.create(
+                    onsite_time=tnow)
+                onsites.append(onsite_instance.pk)
+                instance.onsites.set(onsites)
+        else:
+            sites = []
+            onsite_lis = Employee.onsites.through.objects.filter(
+                employee_id=instance.id)
+            for site in onsite_lis:
+                sites.append(site.onsite.pk)
+            if instance.status:
+                onsite_inst = Onsite.objects.create(
+                    onsite_time=tnow)
+                sites.append(onsite_inst.pk)
+                instance.onsites.set(sites)
 
         if 'offsites' in validated_data:
             offsite_data = validated_data.pop('offsites')
@@ -120,7 +154,21 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
                     pk=time.get('id'), defaults=time)
                 if offsite_created:
                     offsites.append(offsite_instance.pk)
+            if not instance.status:
+                offsite_instance = Offsite.objects.create(offsite_time=tnow)
+                offsites.append(offsite_instance.pk)
             instance.offsites.set(offsites)
-
+        else:
+            off_sites = []
+            offsite_lis = Employee.offsites.through.objects.filter(
+                employee_id=instance.id)
+            for off_site in offsite_lis:
+                off_sites.append(off_site.offsite.pk)
+            if not instance.status:
+                offsite_inst = Offsite.objects.create(
+                    offsite_time=tnow)
+                off_sites.append(offsite_inst.pk)
+                instance.offsites.set(off_sites)
         instance.save()
+
         return instance

@@ -27,11 +27,11 @@ class Salary(models.Model):
 
 
 class Onsite(models.Model):
-    onsite_time = models.DateTimeField(blank=False,)
+    onsite_time = models.DateTimeField(blank=True, null=False)
 
 
 class Offsite(models.Model):
-    offsite_time = models.DateTimeField(blank=False,)
+    offsite_time = models.DateTimeField(blank=True, null=False)
 
 
 def employee_directory_path(instance, filename):
@@ -54,8 +54,8 @@ class Employee(models.Model):
     status = models.IntegerField(choices=STATUS_CHOICES, default='OFF')
     salary = models.ForeignKey(Salary, on_delete=models.CASCADE)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    onsites = models.ManyToManyField(Onsite)
-    offsites = models.ManyToManyField(Offsite)
+    onsites = models.ManyToManyField(Onsite, blank=True)
+    offsites = models.ManyToManyField(Offsite, blank=True)
 
     class Meta:
         ordering = ['hire_date']
