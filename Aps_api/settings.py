@@ -75,7 +75,7 @@ REST_FRAMEWORK = {
 }
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = 'http://apsapi.herokuapp.com/media/'
+MEDIA_URL = 'http://apsapi.herokuapp.com/media/images'
 
 
 ROOT_URLCONF = 'Aps_api.urls'

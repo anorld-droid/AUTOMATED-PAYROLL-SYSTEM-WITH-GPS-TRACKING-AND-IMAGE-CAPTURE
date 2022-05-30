@@ -27,6 +27,5 @@ urlpatterns = [
     path('api-token-auth/', views.CustomAuthToken.as_view())
 ]
 
-
-urlpatterns += static(settings.MEDIA_URL,
-                      document_root=settings.MEDIA_ROOT)
+urlpatterns += path(settings.MEDIA_URL,
+                    document_root=settings.MEDIA_ROOT)
